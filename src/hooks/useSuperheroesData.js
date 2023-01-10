@@ -10,9 +10,11 @@ export const useSuperheroesData = (onSuccess, onError) => {
     enabled: false,
     onSuccess,
     onError,
-    select: (data) => {
-      const superHeroNames = data.data.map((hero) => hero.name);
-      return superHeroNames;
-    },
+    cacheTime: 50000,
+    refetchInterval: 1000
+    // select: (data) => {
+    //   const superHeroNames = data.data.map((hero) => hero.name);
+    //   return superHeroNames;
+    // },
   });
 };
